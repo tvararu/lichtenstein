@@ -2,10 +2,6 @@
 /* global Lights */
 /* global LightList */
 
-const {
-  RaisedButton
-} = mui
-
 const ThemeManager = new mui.Styles.ThemeManager()
 
 App = React.createClass({ // eslint-disable-line
@@ -28,8 +24,8 @@ App = React.createClass({ // eslint-disable-line
   },
 
   render () {
-    return <div>
-      <RaisedButton label='Sup' primary={ true } />
+    return <div className='outer'>
+      <h1 className='title'>Lichtenstein</h1>
       <LightList lights={ this.data.lights } />
     </div>
   }

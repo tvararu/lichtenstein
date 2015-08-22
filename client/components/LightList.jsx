@@ -17,8 +17,8 @@ LightList = React.createClass({ // eslint-disable-line
         console.log(light)
         return [
           <ListItem key={ light._id }
-            primaryText={ 'Light ' + (index + 1) }
-            secondaryText={ 'Secondary Text' }
+            primaryText={ light.name }
+            secondaryText={ light.type }
           />,
           <ListDivider />
         ]
