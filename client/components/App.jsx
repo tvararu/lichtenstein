@@ -1,15 +1,17 @@
+/* global Lights */
+
 App = React.createClass({ // eslint-disable-line
   mixins: [ReactMeteorData],
 
   getMeteorData () {
     return {
-      tasks: []
+      lights: Lights.find().fetch()
     }
   },
 
   render () {
     return <div>
-      <h1>Hello world!</h1>
+      <div>{ JSON.stringify(this.data.lights) }</div>
     </div>
   }
 })

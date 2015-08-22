@@ -1,5 +1,5 @@
 {
   "standard": {
-    "global": ["Session", "Template", "Meteor", "React", "Mongo", "ReactMeteorData"]
+    "global": ["Session", "Template", "Meteor", "React", "Mongo", "ReactMeteorData", "HTTP"]
   }
 }
