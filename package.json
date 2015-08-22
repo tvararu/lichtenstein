@@ -1,0 +1,5 @@
+{
+  "standard": {
+    "global": ["Session", "Template", "Meteor", "React", "Mongo", "ReactMeteorData"]
+  }
+}
