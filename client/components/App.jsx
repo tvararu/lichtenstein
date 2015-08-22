@@ -23,10 +23,17 @@ App = React.createClass({ // eslint-disable-line
     }
   },
 
+  onLightToggle (id, toggled) {
+    Lights.update(id, { '$set': { 'state.on': toggled } })
+  },
+
   render () {
     return <div className='outer'>
       <h1 className='title'>Lichtenstein</h1>
-      <LightList lights={ this.data.lights } />
+      <LightList
+        lights={ this.data.lights }
+        onLightToggle={ this.onLightToggle }
+      />
     </div>
   }
 })
