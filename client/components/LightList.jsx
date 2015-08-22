@@ -16,7 +16,6 @@ LightList = React.createClass({ // eslint-disable-line
   render () {
     return <List>{
       this.props.lights.map((light, index) => {
-        console.log(light)
         const toggle = light.state.reachable ? <Toggle
           defaultToggled={ light.state.on }
           style={{ marginRight: '1em' }}
