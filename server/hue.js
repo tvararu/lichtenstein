@@ -1,5 +1,4 @@
 /* global Lights */
-Lights = new Mongo.Collection('lights') // eslint-disable-line
 
 const BASE_URL = 'http://192.168.1.7/api/15b381be1c341607308641d2ca91e2b/lights'
 
