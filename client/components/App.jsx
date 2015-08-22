@@ -1,7 +1,25 @@
+/* global mui */
 /* global Lights */
+/* global LightList */
+
+const {
+  RaisedButton
+} = mui
+
+const ThemeManager = new mui.Styles.ThemeManager()
 
 App = React.createClass({ // eslint-disable-line
   mixins: [ReactMeteorData],
+
+  childContextTypes: {
+    muiTheme: React.PropTypes.object
+  },
+
+  getChildContext () {
+    return {
+      muiTheme: ThemeManager.getCurrentTheme()
+    }
+  },
 
   getMeteorData () {
     return {
@@ -9,22 +27,10 @@ App = React.createClass({ // eslint-disable-line
     }
   },
 
-  renderLights () {
-    return this.data.lights.map((light, index) => {
-      return <div key={ light._id }>
-        <strong>Light { index }</strong>
-        <ul>
-          { Object.keys(light.state).map((key) => {
-            return <li key={ light._id + key }>{ key }: { light.state[key].toString() }</li>
-          }) }
-        </ul>
-      </div>
-    })
-  },
-
   render () {
     return <div>
-      <div>{ this.renderLights() }</div>
+      <RaisedButton label='Sup' primary={ true } />
+      <LightList lights={ this.data.lights } />
     </div>
   }
 })

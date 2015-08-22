@@ -10,3 +10,10 @@ insecure
 react
 http
 ecmascript
+cosmos:browserify
+meteorhacks:npm
+
+
+npm-container
+fourseven:scss
+johnantoni:meteor-normalize
